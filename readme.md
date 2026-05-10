@@ -1,6 +1,6 @@
 # Aplikasi Pencatat Pengeluaran Harian
 
-Proyek "Aplikasi Pencatat Pengeluaran Harian" telah selesai diimplementasikan sesuai dengan seluruh persyaratan.
+Proyek "Aplikasi Pencatat Pengeluaran Harian" telah diimplementasikan.
 
 ## Persyaratan yang Diselesaikan
 
