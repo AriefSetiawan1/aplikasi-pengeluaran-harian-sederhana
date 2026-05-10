@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencatat Pengeluaran Harian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Pengeluaran Harian</h1>
+            <p>Kelola keuangan Anda dengan mudah dan elegan.</p>
+        </header>
+
+        <div class="glass-panel summary-panel">
+            <div class="summary-item">
+                <span class="summary-label">Total Pengeluaran</span>
+                <h2 class="summary-value" id="total-amount">Rp 0</h2>
+            </div>
+            <div class="summary-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <div class="glass-panel form-panel">
+                <h3>Tambah Pengeluaran</h3>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label for="title">Judul Pengeluaran</label>
+                        <input type="text" id="title" required placeholder="Contoh: Makan Siang">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Jumlah (Rp)</label>
+                        <input type="number" id="amount" required placeholder="Contoh: 50000" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Tanggal</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Kategori</label>
+                        <select id="category">
+                            <option value="Makanan">Makanan</option>
+                            <option value="Transportasi">Transportasi</option>
+                            <option value="Belanja">Belanja</option>
+                            <option value="Tagihan">Tagihan</option>
+                            <option value="Hiburan">Hiburan</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <span>Simpan Pengeluaran</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="glass-panel list-panel">
+                <div class="list-header">
+                    <h3>Riwayat Pengeluaran</h3>
+                    <div class="status-indicator" id="health-status" title="Status API: Loading">
+                        <div class="pulse-dot"></div>
+                    </div>
+                </div>
+                <div class="expense-list" id="expense-list">
+                    <!-- Data will be populated here -->
+                    <div class="empty-state">Memuat data...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
